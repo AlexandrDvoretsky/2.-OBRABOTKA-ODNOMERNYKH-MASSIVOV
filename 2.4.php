@@ -3,14 +3,20 @@
 
   $mas = [1,3,3,2,5,7,8,8,9];
 
-  for($i=0;$i<9;$i++)
+  for($i=0;$i<999;$i++)
   {
     echo "$mas[$i] | ";
+    $count++;
+    if($mas[$i+1]=="") break;
+  }
+
+  for($i=0;$i<$count;$i++)
+  {
     if($mas[$i]==$mas[$i+1] && $mas[$i+1]!=$num)
     {
-      $count++;
+      $k++;
       $num=$mas[$i];
     }
   }
-  echo "<br>Количество пар: $count";
+  echo "<br>Количество пар: $k";
 ?>
