@@ -28,5 +28,4 @@
   }
   $dif = $count-$cnt;
   echo "<br>Количество различных элементов: $dif - $count<br>";
-  print_r($masA);
 ?>
