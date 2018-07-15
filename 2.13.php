@@ -1,19 +1,21 @@
 <?php
   // 2.13 В массиве А(N) найти два наименьших элемента и два наибольших элемента.
 
-  $testMas=[13210,962,743,450,503,601,967,148,849,1000,101,100000,1];
+  $testMas=[10,20,-30,40,50,-60,70,80,90,100,-110,0,3];
   $mas = $testMas;
 
-  echo "Исходный массив: ";
-  for($i=0;$i<999;$i++)
+  $i=0;
+  echo "Исходный массив:";
+  while($mas[$i]>0 || $mas[$i]<0 || $mas[$i]===0)
   {
-    echo "$testMas[$i] | ";
     $count++;
-    if($testMas[$i]>$num)
+    echo "$mas[$i] | ";
+    $i++;
+    if($mas[$i]>$num)
     {
-      $num=$testMas[$i];
+      $num = $mas[$i];
+      $posMax=$i;
     }
-    if($testMas[$i+1]=="") break;
   }
   $max=0;$min=$num;$min2=$num;
 
@@ -28,8 +30,7 @@
     }
     elseif($min2>$mas[$i]) $min2=$mas[$i];
   }
-  echo "$min - $min2";
-
+  echo "$min  $min2";
   echo "<br>MAX: ";
   while ($k!=2) {
     for($i=0;$i<$count;$i++)
@@ -41,7 +42,7 @@
       }
     }
     $mas[$pos] = 0;
-    echo "$max -";
+    echo "$max  ";
     $max=0;
     $k++;
   }
