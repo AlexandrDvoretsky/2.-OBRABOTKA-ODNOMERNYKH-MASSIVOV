@@ -5,14 +5,13 @@
   $mas=[3,5,6,1,6,3,2,8,5,9,18,10,7];
   $p=3;
 
-  echo "Исходный массив: ";
-  for($i=0;$i<999;$i++)
+  $i=0;
+  echo "Исходный массив:";
+  while($mas[$i]>0 || $mas[$i]<0 || $mas[$i]===0)
   {
-    if($mas[$i]=="") break;
-    else{
-      echo "$mas[$i] | ";
-      $count++;
-    }
+    $count++;
+    echo "$mas[$i] | ";
+    $i++;
   }
 
   for($i=0;$i<$count;$i++)
