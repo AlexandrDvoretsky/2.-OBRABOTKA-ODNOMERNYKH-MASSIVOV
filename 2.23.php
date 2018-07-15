@@ -3,19 +3,21 @@
 
   $masA=[3,5,-6,9,7,-6,5,4,3,10,123,24,23,5,43,5,4,765,8,-7];
 
-  echo "Исходный массив: ";
-  for($i=0;$i<999;$i++)
+  $i=0;
+  echo "Исходный массив:";
+  while($masA[$i]>0 || $masA[$i]<0 || $masA[$i]===0)
   {
-    echo "$masA[$i] | ";
     $cnt++;
+    echo "$masA[$i] | ";
+    $i++;
     if($masA[$i]>$num)
     {
-      $num=$masA[$i];
+      $num = $masA[$i];
+      $posMax=$i;
     }
-    if($masA[$i+1]=="") break;
   }
-
   $min = $num;
+
   for($i=0;$i<$cnt;$i++)
   {
     $masB[$i] = $masA[$i];
