@@ -3,7 +3,7 @@
     а) массив положительных и отрицательных элементов;
     б) массив четных и нечетных элементов.*/
 
-    $mas=[-10,-20,30,40,50,60,0,7,8,90,100,-120,-301];
+    $mas=[-10,-20,30,40,50,60,0,7,8,90,100,-120,-301,13,7];
 
     $i=0;
     echo "Исходный массив:";
@@ -39,25 +39,34 @@
       }
     }
 
-    echo "<br>A):<br>Массив положительных элементов: ";
-    for($j=0;$j<$countPol;$j++)
+    $kolA = $countPol+$countOtr;
+    for($i=0;$i<$countPol;$i++)
     {
-      echo "$masPol[$j] | ";
+      $masA[]=$masPol[$i];
     }
-    echo "<br>Массив отрицательных элементов: ";
-    for($j=0;$j<$countOtr;$j++)
+    for($i=0;$i<$countOtr;$i++)
     {
-      echo "$masOtr[$j] | ";
-    }
-    echo "<br>Б):<br>Массив четных элементов: ";
-    for($j=0;$j<$countChet;$j++)
-    {
-      echo "$masChet[$j] | ";
-    }
-    echo "<br>Массив нечетных элементов: ";
-    for($j=0;$j<$countNechet;$j++)
-    {
-      echo "$masNeсhet[$j] | ";
+      $masA[]=$masOtr[$i];
     }
 
+    $kolB = $countChet+$countNechet;
+    for($i=0;$i<$countChet;$i++)
+    {
+      $masB[]=$masChet[$i];
+    }
+    for($i=0;$i<$countNechet;$i++)
+    {
+      $masB[]=$masNeсhet[$i];
+    }
+
+    echo "<br>а) массив положительных и отрицательных элементов: ";
+    for($i=0;$i<$kolA;$i++)
+    {
+      echo "$masA[$i] | ";
+    }
+    echo "<br>б) массив четных и нечетных элементов: ";
+    for($i=0;$i<$kolB;$i++)
+    {
+      echo "$masB[$i] | ";
+    }
 ?>
