@@ -50,16 +50,6 @@
       }
     }
   }
-  echo "<br>";
-  for($i=0;$i<$countPol;$i++)
-  {
-    echo "$masPol[$i] | ";
-  }
-  echo "<br>";
-  for($i=0;$i<$countOtr;$i++)
-  {
-    echo "$masOtr[$i] | ";
-  }
 
   for($i=0;$i<$count;$i++)
   {
